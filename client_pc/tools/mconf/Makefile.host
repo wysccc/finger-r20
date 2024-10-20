@@ -1,0 +1,42 @@
+HOSTCC=gcc
+HOSTCXX=g++
+export HOSTCC HOSTCXX
+src := .
+obj := .
+srctree := .
+include $(obj)/Makefile
+
+__hostprogs := $(sort $(hostprogs-y) $(hostprogs-m))
+
+# C executables linked based on several .o files
+host-cmulti	:= $(foreach m,$(__hostprogs),\
+		   $(if $($(m)-cxxobjs),,$(if $($(m)-objs),$(m))))
+
+# Object (.o) files compiled from .c files
+host-cobjs	:= $(sort $(foreach m,$(__hostprogs),$($(m)-objs)))
+
+
+__hostprogs     := $(addprefix $(obj)/,$(__hostprogs))
+host-cmulti	:= $(addprefix $(obj)/,$(host-cmulti))
+host-cobjs	:= $(addprefix $(obj)/,$(host-cobjs))
+
+#####
+# Handle options to gcc. Support building with separate output directory
+
+HOST_EXTRACFLAGS += -I$(obj)
+_hostc_flags   = $(HOSTCFLAGS)   $(HOST_EXTRACFLAGS) 
+hostc_flags    = $(_hostc_flags)
+#####
+# Compile programs on the host
+FORCE:
+
+$(host-cmulti): $(obj)/%: $(host-cobjs) FORCE
+	$(HOSTCC) $(HOSTLDFLAGS) -o $@ $(addprefix $(obj)/,$($(@F)-objs)) $(HOST_LOADLIBES) $(HOSTLOADLIBES_$(@F))
+
+$(host-cobjs): $(obj)/%.o: $(src)/%.c FORCE
+	$(HOSTCC) $(hostc_flags) -c -o $@ $<
+
+clean:
+	rm -rf  ${clean-files}
+
+.PHONY:FORCE menuconfig clean

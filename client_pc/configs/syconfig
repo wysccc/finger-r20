@@ -1,0 +1,60 @@
+############################################################################
+#
+#  RTOS_Modules_Xxx syconfig
+#
+#       Copyright (C) 2024 Zhejiang Sunny Optical Intelligence Technology Co.,
+#
+############################################################################
+
+mainmenu "RTOS_Modules_Xxx Menuconfig Configuration"
+
+config PLATFORM
+	string "platform"
+
+config LIBRARY_NAME
+	string "library name"
+
+config CROSS
+	string "cross"
+
+config PLATFORM_FLAGS
+	string "platform flags"
+
+choice
+    prompt "compiler options"
+    default COMPILER_OPTIMIZE
+
+config COMPILER_DEBUG
+	bool "debug"
+config COMPILER_OPTIMIZE
+	bool "optimize"
+config COMPILER_OGENERAL
+	bool "general"
+
+endchoice
+
+config LIBRARY_RULES_FILE
+    string "library rules file"
+
+choice
+    prompt "build static or shared library"
+    default BUILD_STATIC_LIBRARY
+config BUILD_SHARED_LIBRARY
+	bool "share library"
+config BUILD_STATIC_LIBRARY
+	bool "static library"
+endchoice
+
+config BUILD_BIN
+	bool "make bin to test interface(on PC)"
+	default y
+
+config BINARY_NAME
+    string "binary name"
+	depends on  BUILD_BIN
+
+config BINARY_RULES_FILE
+    string "bin rules file"
+	depends on  BUILD_BIN
+
+

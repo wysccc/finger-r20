@@ -1,0 +1,339 @@
+#BasedOnStyle: GNU
+UseTab: Always
+TabWidth: 4
+AllowShortIfStatementsOnASingleLine: Never
+BreakBeforeBraces: Linux
+ColumnLimit: 100
+# AlignEscapedNewlines: Left
+# AlignTrailingComments: true
+IndentCaseLabels: false
+SpaceBeforeParens: ControlStatements
+PointerAlignment: Left
+DerivePointerAlignment: false
+
+## 基于 Google 风格进行配置。注释掉表示未设置默认值。
+#BasedOnStyle: GNU
+## 访问修饰符的偏移量。
+#AccessModifierOffset: -2
+## 函数参数是否对齐。
+#AlignAfterOpenBracket: Align
+## 数组的结构体对齐方式。
+#AlignArrayOfStructures: None
+## 连续宏的对齐方式。
+#AlignConsecutiveMacros: None
+## 连续赋值的对齐方式。
+#AlignConsecutiveAssignments: None
+## 连续位域的对齐方式。
+#AlignConsecutiveBitFields: None
+## 连续声明的对齐方式。
+#AlignConsecutiveDeclarations: None
+## 转义换行符的对齐方式。
+#AlignEscapedNewlines: Right
+## 操作数的对齐方式。
+#AlignOperands: Align
+## 尾部注释的对齐方式。
+#AlignTrailingComments: true
+## 是否允许所有参数放在下一行。
+#AllowAllArgumentsOnNextLine: true
+## 是否允许所有声明的参数放在下一行。
+#AllowAllParametersOfDeclarationOnNextLine: true
+## 是否允许简短枚举值放在单行上。
+#AllowShortEnumsOnASingleLine: true
+## 是否允许简短块语句放在单行上。
+#AllowShortBlocksOnASingleLine: Never
+## 是否允许简短 case 标签放在单行上。
+#AllowShortCaseLabelsOnASingleLine: false
+## 是否允许简短函数放在单行上。
+#AllowShortFunctionsOnASingleLine: All
+## 是否允许简短 Lambda 表达式放在单行上。
+#AllowShortLambdasOnASingleLine: All
+## 是否允许简短 if 语句放在单行上。
+#AllowShortIfStatementsOnASingleLine: Never
+## 是否允许简短循环语句放在单行上。
+#AllowShortLoopsOnASingleLine: false
+## 函数定义返回类型后是否强制换行。
+#AlwaysBreakAfterDefinitionReturnType: None
+## 返回类型后是否强制换行。
+#AlwaysBreakAfterReturnType: None
+## 多行字符串之前是否强制换行。
+#AlwaysBreakBeforeMultilineStrings: false
+## 模板声明是否在新行开始。
+#AlwaysBreakTemplateDeclarations: MultiLine
+## 设定要分包的宏。
+#AttributeMacros:
+#  - __capability
+## 函数参数是否紧凑打包。
+#BinPackArguments: true
+## 构造函数初始化列表的打包方式。
+#BinPackParameters: true
+## 大括号包裹设置。
+#BraceWrapping:
+#  AfterCaseLabel:  false
+#  AfterClass:      false
+#  AfterControlStatement: Never
+#  AfterEnum:       false
+#  AfterFunction:   false
+#  AfterNamespace:  false
+#  AfterObjCDeclaration: false
+#  AfterStruct:     false
+#  AfterUnion:      false
+#  AfterExternBlock: false
+#  BeforeCatch:     false
+#  BeforeElse:      false
+#  BeforeLambdaBody: false
+#  BeforeWhile:     false
+#  IndentBraces:    false
+#  SplitEmptyFunction: true
+#  SplitEmptyRecord: true
+#  SplitEmptyNamespace: true
+## 二进制运算符之前是否换行。
+#BreakBeforeBinaryOperators: None
+## 概念声明之前是否换行。
+#BreakBeforeConceptDeclarations: true
+## 大括号之前的换行风格。
+#BreakBeforeBraces: Attach
+## 继承列表中的逗号之前是否换行。
+#BreakBeforeInheritanceComma: false
+## 继承列表的换行风格。
+#BreakInheritanceList: BeforeColon
+## 三元运算符之前是否换行。
+#BreakBeforeTernaryOperators: true
+## 构造函数初始化器的逗号之前是否换行。
+#BreakConstructorInitializersBeforeComma: false
+## 构造函数初始化器的换行风格。
+#BreakConstructorInitializers: BeforeColon
+## Java 字段注解之后是否换行。
+#BreakAfterJavaFieldAnnotations: false
+## 字符串字面量是否分行。
+#BreakStringLiterals: true
+## 每行的最大字符数。
+#ColumnLimit: 80
+## 注释的正则表达式，用于标记特殊注释。
+#CommentPragmas: '^ IWYU pragma:'
+## Qualifier 对齐方式。
+#QualifierAlignment: Leave
+## 命名空间是否紧凑。
+#CompactNamespaces: false
+## 构造函数初始化器的缩进宽度。
+#ConstructorInitializerIndentWidth: 4
+## 续行缩进宽度。
+#ContinuationIndentWidth: 4
+## C++11 列表初始化风格。
+#Cpp11BracedListStyle: true
+## 是否自动检测换行。
+#DeriveLineEnding: true
+## 是否自动检测指针对齐。
+#DerivePointerAlignment: false
+## 是否禁用格式化。
+#DisableFormat: false
+## 访问修饰符之后是否空行。
+#EmptyLineAfterAccessModifier: Never
+## 访问修饰符之前是否空行。
+#EmptyLineBeforeAccessModifier: LogicalBlock
+## 是否自动检测打包。
+#ExperimentalAutoDetectBinPacking: false
+## 构造函数初始化器是否紧凑打包。
+#PackConstructorInitializers: BinPack
+## 基于风格的配置，默认值为空表示不基于任何风格。
+#BasedOnStyle: ''
+## 构造函数初始化器是否放在一行或每行一个。
+#ConstructorInitializerAllOnOneLineOrOnePerLine: false
+## 是否允许所有构造函数初始化器放在下一行。
+#AllowAllConstructorInitializersOnNextLine: true
+## 是否修复命名空间注释。
+#FixNamespaceComments: true
+## 处理循环宏的列表。
+#ForEachMacros:
+#  - foreach
+#  - Q_FOREACH
+#  - BOOST_FOREACH
+## 处理 if 宏的列表。
+#IfMacros:
+#  - KJ_IF_MAYBE
+## 包含块的排序方式。
+#IncludeBlocks: Preserve
+## 包含文件的分类和排序。
+#IncludeCategories:
+#  - Regex: '^"(llvm|llvm-c|clang|clang-c)/'
+#    Priority: 2
+#    SortPriority: 0
+#    CaseSensitive: false
+#  - Regex: '^(<|"(gtest|gmock|isl|json)/)'
+#    Priority: 3
+#    SortPriority: 0
+#    CaseSensitive: false
+#  - Regex: '.*'
+#    Priority: 1
+#    SortPriority: 0
+#    CaseSensitive: false
+## 是否将包含文件标记为主文件。
+#IncludeIsMainRegex: '(Test)?$'
+## 主文件的正则表达式，通常为空。
+#IncludeIsMainSourceRegex: ''
+## 访问修饰符的缩进方式。
+#IndentAccessModifiers: false
+## case 标签的缩进方式。
+#IndentCaseLabels: false
+## case 块的缩进方式。
+#IndentCaseBlocks: false
+## goto 标签的缩进方式。
+#IndentGotoLabels: true
+## 预处理指令的缩进方式。
+#IndentPPDirectives: None
+## extern 块的缩进方式。
+#IndentExternBlock: AfterExternBlock
+## 是否缩进 requires 关键字。
+#IndentRequires: false
+## 缩进宽度。
+#IndentWidth: 2
+## 是否对包的宏进行紧凑打包。
+#IndentWrappedFunctionNames: false
+## 是否插入尾部逗号。
+#InsertTrailingCommas: None
+## JavaScript 引号风格。
+#JavaScriptQuotes: Leave
+## JavaScript 导入的换行风格。
+#JavaScriptWrapImports: true
+## 块的开始是否保留空行。
+#KeepEmptyLinesAtTheStartOfBlocks: true
+## Lambda 体的缩进风格。
+#LambdaBodyIndentation: Signature
+## 宏块的开始标记。
+#MacroBlockBegin: ''
+## 宏块的结束标记。
+#MacroBlockEnd: ''
+## 保留的空行数。
+#MaxEmptyLinesToKeep: 1
+## 命名空间的缩进方式。
+#NamespaceIndentation: None
+## Objective-C 协议列表的打包方式。
+#ObjCBinPackProtocolList: Auto
+## Objective-C block 的缩进宽度。
+#ObjCBlockIndentWidth: 2
+## Objective-C 嵌套块参数的换行风格。
+#ObjCBreakBeforeNestedBlockParam: true
+## Objective-C 属性后的空格风格。
+#ObjCSpaceAfterProperty: false
+## Objective-C 协议列表前的空格风格。
+#ObjCSpaceBeforeProtocolList: true
+## 赋值运算符的换行惩罚值。
+#PenaltyBreakAssignment: 2
+## 第一个调用参数的换行惩罚值。
+#PenaltyBreakBeforeFirstCallParameter: 19
+## 注释换行的惩罚值。
+#PenaltyBreakComment: 300
+## `<<` 运算符的换行惩罚值。
+#PenaltyBreakFirstLessLess: 120
+## 括号的换行惩罚值。
+#PenaltyBreakOpenParenthesis: 0
+## 字符串的换行惩罚值。
+#PenaltyBreakString: 1000
+## 模板声明的换行惩罚值。
+#PenaltyBreakTemplateDeclaration: 10
+## 超过字符数的惩罚值。
+#PenaltyExcessCharacter: 1000000
+## 返回类型单独一行的惩罚值。
+#PenaltyReturnTypeOnItsOwnLine: 60
+## 缩进空白的惩罚值。
+#PenaltyIndentedWhitespace: 0
+## 指针对齐方式。
+#PointerAlignment: Right
+## 预处理指令的缩进宽度，-1 表示不缩进。
+#PPIndentWidth: -1
+## 引用对齐方式。
+#ReferenceAlignment: Pointer
+## 是否重排注释。
+#ReflowComments: true
+## 是否移除 LLVM 风格的大括号。
+#RemoveBracesLLVM: false
+## 是否将定义块分开。
+#SeparateDefinitionBlocks: Leave
+## 短命名空间行数。
+#ShortNamespaceLines: 1
+## 是否排序包含文件。
+#SortIncludes: CaseSensitive
+## Java 的静态导入排序方式。
+#SortJavaStaticImport: Before
+## 是否排序使用声明。
+#SortUsingDeclarations: true
+## C 样式强制转换后的空格风格。
+#SpaceAfterCStyleCast: false
+## 逻辑非运算符后的空格风格。
+#SpaceAfterLogicalNot: false
+## 模板关键字后的空格风格。
+#SpaceAfterTemplateKeyword: true
+## 赋值运算符前的空格风格。
+#SpaceBeforeAssignmentOperators: true
+## case 标签冒号前的空格风格。
+#SpaceBeforeCaseColon: false
+## C++11 列表初始化的空格风格。
+#SpaceBeforeCpp11BracedList: false
+## 构造函数初始化器冒号前的空格风格。
+#SpaceBeforeCtorInitializerColon: true
+## 继承冒号前的空格风格。
+#SpaceBeforeInheritanceColon: true
+## 括号前的空格风格，控制语句为 true，函数声明为 false。
+#SpaceBeforeParens: ControlStatements
+## 空括号中的空格风格。
+#SpaceBeforeParensOptions:
+#  AfterControlStatements: true
+#  AfterForeachMacros: true
+#  AfterFunctionDefinitionName: false
+#  AfterFunctionDeclarationName: false
+#  AfterIfMacros: true
+#  AfterOverloadedOperator: false
+#  BeforeNonEmptyParentheses: false
+## 指针限定符周围的空格风格。
+#SpaceAroundPointerQualifiers: Default
+## 范围基于的 for 循环冒号前的空格风格。
+#SpaceBeforeRangeBasedForLoopColon: true
+## 空块中的空格风格。
+#SpaceInEmptyBlock: false
+## 空括号中的空格风格。
+#SpaceInEmptyParentheses: false
+## 尾部注释前的空格数。
+#SpacesBeforeTrailingComments: 1
+## 尖括号中的空格风格。
+#SpacesInAngles: Never
+## 条件语句中的空格风格。
+#SpacesInConditionalStatement: false
+## 容器字面量中的空格风格。
+#SpacesInContainerLiterals: true
+## C 样式强制转换括号中的空格风格。
+#SpacesInCStyleCastParentheses: false
+## 行注释前的空格范围。
+#SpacesInLineCommentPrefix:
+#  Minimum: 1
+#  Maximum: -1
+## 括号中的空格风格。
+#SpacesInParentheses: false
+## 方括号中的空格风格。
+#SpacesInSquareBrackets: false
+## 方括号前的空格风格。
+#SpaceBeforeSquareBrackets: false
+## 位域冒号的空格风格。
+#BitFieldColonSpacing: Both
+## 使用的标准版本。
+#Standard: Latest
+## 语句属性宏列表。
+#StatementAttributeLikeMacros:
+#  - Q_EMIT
+## 语句宏列表。
+#StatementMacros:
+#  - Q_UNUSED
+#  - QT_REQUIRE_VERSION
+## Tab 的宽度。
+#TabWidth: 8
+## 是否使用 CRLF 换行。
+#UseCRLF: false
+## 是否使用 Tab 进行缩进。
+#UseTab: Never
+## 空格敏感宏列表。
+#WhitespaceSensitiveMacros:
+#  - STRINGIZE
+#  - PP_STRINGIZE
+#  - BOOST_PP_STRINGIZE
+#  - NS_SWIFT_NAME
+#  - CF_SWIFT_NAME
+#...
+#
